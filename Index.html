@@ -1,0 +1,442 @@
+<[16:49, 09/11/2025] Saniya🫶🏻🌍👩‍❤️‍👨: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HeyBooksy – Where Every Story Begins 🌷</title>
+  <meta name="description" content="Curated novels in every genre: Mystery, Romance, Fantasy, Self-Help, Horror & more. New & pre-loved. Hand-wrapped with India-wide delivery."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --beige: #F5F5DC;
+      --orange: #FF8C00;
+      --cream: #FFFDD0;
+      --dark: #2C1810;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--beige);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--orange); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+    /* Header */
+    header {
+      background: var(--cream);
+      padding: 1rem 0;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo img { height: 55px; }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+    }
+    .nav-links a {
+      color: var(--dark); text-decoration: none; font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+      height: 75vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; color: white;
+    }
+    .hero-content {
+      animation: fadeIn 1.2s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.3rem; margin-bottom: 1.5rem; }
+    .btn {
+      background: var(--orange); color: white; padding: 14px 32px;
+      border-radius: 50px; text-decoration: none; font-weight: 600;
+      display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(255,140,0,0.3);
+    }
+    .btn:hover { background: #e67e22; transform: translateY(-2px); }
+
+    /* Sections */
+    section { padding: 4rem 0; }
+    .about, .perks { background: var(--cream); text-align: center; }
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 2rem;
+    }
+    .feature {
+      background: white; padding: 1.5rem; border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.06); transition: transform 0.3s;
+    }
+    .feature:hover { transform: translateY(-5px); }
+
+    /* GENRES GRID */
+    .genres {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23f5d7a3" d="M0,0h100v100H0z"/></svg>') repeat;
+      padding: 4rem 0;
+    }
+    .genres h2 {
+      text-align: center; margin-bottom: 2.5rem; font-size: 2.2rem;
+    }
+    .genres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .genre-card {
+      background: white;
+      border-radius: 18px;
+      padding: 1.3rem;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .genre-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--orange);
+      box-shadow: 0 12px 25px rgba(255,140,0,0.15);
+    }
+    .genre-card .icon {
+      font-size: 2.2rem; margin-bottom: 0.8rem; display: block;
+    }
+    .genre-card h3 {
+      font-size: 1.1rem; margin: 0.5rem 0;
+      color: var(--dark);
+    }
+    .genre-card p {
+      font-size: 0.8rem; color: #666; margin: 0;
+      line-height: 1.3;
+    }
+
+    /* Books */
+    .featured-books { background: var(--beige); }
+    .books-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem; margin-top: 2rem;
+    }
+    .book-card {
+      background: var(--cream); border-radius: 16px; overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.06); transition: 0.3s;
+    }
+    .book-card:hover { transform: translateY(-8px); }
+    .book-card img { width: 100%; height: 260px; object-fit: cover; }
+    .book-info { padding: 1rem; }
+    .book-info h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .price { font-weight: 600; color: var(--orange); }
+    .condition { font-size: 0.85rem; color: #777; }
+
+    /* Perks & Quiz */
+    .quiz {
+      background: white; padding: 2rem; border-radius: 16px; margin: 2rem auto; max-width: 500px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+    .quiz select, .quiz button {
+      margin: 0.5rem 0; padding: 12px; width: 100%; border-radius: 8px;
+      border: 1.5px solid var(--orange); font-family: inherit;
+    }
+    .quiz button { background: var(--orange); color: white; cursor: pointer; font-weight: 600; }
+
+    /* Shop */
+    .shop { text-align: center; }
+    .qr-code { max-width: 160px; margin: 1.5rem 0; border: 8px solid white; border-radius: 16px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+    /* Footer */
+    footer {
+      background: var(--dark); color: #eee; text-align: center; padding: 2.5rem 0;
+    }
+    .social a { color: #eee; font-size: 1.6rem; margin: 0 0.8rem; transition: 0.3s; }
+    .social a:hover { color: var(--orange); }
+
+    /* Coupon Popup */
+    .popup {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); z-index: 999; justify-content: center; align-items: center;
+    }
+    .popup-content {
+      background: var(--cream); padding: 2.5rem; border-radius: 20px; text-align: center;
+      max-width: 380px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); animation: pop 0.4s ease-out;
+      position: relative;
+    }
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .close {
+      position: absolute; top: 15px; right: 20px; font-size: 2rem; color: var(--orange); cursor: pointer;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.3rem; }
+      .nav-links { display: none; }
+      .hero { height: 60vh; }
+      .genres-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="container">
+      <div class="logo">
+        <img src="logo.png" alt="HeyBooksy Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#genres">Genres</a></li>
+        <li><a href="#featured">Books</a></li>
+        <li><a href="#perks">Perks</a></li>
+        <li><a href="#shop">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>HeyBooksy</h1>
+      <p>Where every story begins 🌷</p>
+      <a href="#genres" class="btn">Explore Genres</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about container">
+    <h2>Welcome to Your Next Chapter</h2>
+    <p>Curated novels in <strong>every genre</strong> — new or pre-loved. Hand-wrapped ✨ with love. Delivered India-wide 🚚.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>🦋 New & Pre-Loved</h3>
+        <p>Fresh or gently loved.</p>
+      </div>
+      <div class="feature">
+        <h3>✨ Hand Wrapped</h3>
+        <p>Feels like a gift.</p>
+      </div>
+      <div class="feature">
+        <h3>🚚 India Wide</h3>
+        <p>Free over ₹599.</p>
+      </div>
+      <div class="feature">
+        <h3>🤔 12+ Genres</h3>
+        <p>From Mystery to Self-Help.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENRES SECTION -->
+  <section id="genres" class="genres">
+    <div class="container">
+      <h2>Genre of Novels</h2>
+      <p style="text-align:center;margin-bottom:2rem;font-size:1rem;color:#555;">Click any genre to explore curated picks</p>
+      <div class="genres-grid">
+        <!-- Self Help -->
+        <div class="genre-card" onclick="scrollToCollection('selfhelp')">
+          <span class="icon">💪</span>
+          <h3>Self Help</h3>
+          <p>The Power of Now, Atomic Habits</p>
+        </div>
+        <!-- Romance -->
+        <div class="genre-card" onclick="scrollToCollection('romance')">
+          <span class="icon">💕</span>
+          <h3>Romance</h3>
+          <p>Whispers Between Stars, Love Unwritten</p>
+        </div>
+        <!-- Spiritual -->
+        <div class="genre-card" onclick="scrollToCollection('spiritual')">
+          <span class="icon">🧘</span>
+          <h3>Spiritual</h3>
+          <p>The Moon Weaver Secret, Becoming Supernatural</p>
+        </div>
+        <!-- Fantasy -->
+        <div class="genre-card" onclick="scrollToCollection('fantasy')">
+          <span class="icon">🏰</span>
+          <h3>Fantasy</h3>
+          <p>Crown of Shadows, Emberheart Chronicles</p>
+        </div>
+        <!-- Paper Souls -->
+        <div class="genre-card" onclick="scrollToCollection('papersouls')">
+          <span class="icon">🕊️</span>
+          <h3>Paper Souls</h3>
+          <p>Atomic Sabirs</p>
+        </div>
+        <!-- Dark Romance -->
+        <div class="genre-card" onclick="scrollToCollection('darkromance')">
+          <span class="icon">🌙</span>
+          <h3>Dark Romance</h3>
+          <p>Rob Itcheny the Tomrirs</p>
+        </div>
+        <!-- Mystery / Thriller -->
+        <div class="genre-card" onclick="scrollToCollection('mystery')">
+          <span class="icon">🔍</span>
+          <h3>Mystery / Thriller</h3>
+          <p>Bound By Darkness, Twisted Corridors</p>
+        </div>
+        <!-- The Silent Corridor -->
+        <div class="genre-card" onclick="scrollToCollection('silent')">
+          <span class="icon">🕳️</span>
+          <h3>The Silent Corridor</h3>
+          <p>Echoes Beneath</p>
+        </div>
+        <!-- Inspirational / Drama -->
+        <div class="genre-card" onclick="scrollToCollection('drama')">
+          <span class="icon">🎭</span>
+          <h3>Inspirational / Drama</h3>
+          <p>Paper Souls, Threads of Tomorrow</p>
+        </div>
+        <!-- Finance -->
+        <div class="genre-card" onclick="scrollToCollection('finance')">
+          <span class="icon">💰</span>
+          <h3>Finance</h3>
+          <p>Rich Dad Poor Dad, Millionaire Investor</p>
+        </div>
+        <!-- Historical Fiction -->
+        <div class="genre-card" onclick="scrollToCollection('historical')">
+          <span class="icon">📜</span>
+          <h3>Historical Fiction</h3>
+          <p>The Pillars of the Earth, Hill House Drada</p>
+        </div>
+        <!-- Horror -->
+        <div class="genre-card" onclick="scrollToCollection('horror')">
+          <span class="icon">💀</span>
+          <h3>Horror</h3>
+          <p>The Haunting of Hill House, Dracula</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Books -->
+  <section id="featured" class="featured-books container">
+    <h2>Featured This Week</h2>
+    <p>Handpicked from your favorite genres.</p>
+    <div class="books-grid">
+      <div class="book-card">
+        <img src="https://images.unsplash.com/photo-1544947950-fa07a87d2373?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mystery">
+        <div class="book-info">
+          <h3>The Silent Patient</h3>
+          <p class="price">₹299</p>
+          <p class="condition">New • Mystery</p>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Romance">
+        <div class="book-info">
+          <h3>It Ends With Us</h3>
+          <p class="price">₹249</p>
+          <p class="condition">Pre-Loved • Romance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks -->
+  <section id="perks" class="perks container">
+    <h2>BookPerks 😌✨</h2>
+    <p>Every order includes a bookmark, reading playlist, and a handwritten note.</p>
+    <form style="max-width:400px;margin:2rem auto;display:flex;gap:0.5rem;">
+      <input type="email" placeholder="you@email.com" style="flex:1;padding:12px;border-radius:8px;border:1.5px solid var(--orange);">
+      <button type="submit" class="btn" style="padding:12px 20px;">Join</button>
+    </form>
+
+    <div class="quiz">
+      <h3>Build Your Escape Kit</h3>
+      <p>Answer 1 question for a personalized book rec:</p>
+      <select id="mood">
+        <option>Cozy Mystery</option>
+        <option>Heartfelt Romance</option>
+        <option>Edge-of-Seat Thriller</option>
+        <option>Magical Fantasy</option>
+      </select>
+      <button onclick="getRec()" class="btn">Get My Book</button>
+    </div>
+  </section>
+
+  <!-- Shop & QR -->
+  <section id="shop" class="shop container">
+    <h2>Ready to Begin?</h2>
+    <p>Scan below or click to shop!</p>
+    <img src="qr.png" alt="HeyBooksy QR Code" class="qr-code">
+    <br/>
+    <a href="https://heybooksy.myshopify.com?discount=HEYFIRST10" target="_blank" class="btn">Shop Now</a>
+    <p style="margin-top:1rem;font-size:0.95rem;color:#555;">
+      Use code <strong>HEYFIRST10</strong> for <strong>10% off</strong> on orders above <strong>₹299</strong>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 HeyBooksy. Crafted with 📖 & ☕</p>
+      <div class="social">
+        <a href="https://instagram.com/heybooksy" target="_blank">📸</a>
+        <a href="mailto:hello@heybooksy.com">✉️</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Coupon Popup -->
+  <div id="couponPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">×</span>
+      <h2>Hey, New Reader! 🌟</h2>
+      <p>Thanks for scanning our QR!</p>
+      <p style="font-size:1.1rem;margin:1rem 0;">
+        Get <strong>10% OFF</strong> your first order above <strong>₹299</strong>
+      </p>
+      <p style="background:#ffe8cc;padding:10px;border-radius:8px;font-weight:600;">
+        Code: <strong>HEYFIRST10</strong>
+      </p>
+      <a href="https://heybooksy.myshopify.com?discount=HEYFIRST10" class="btn" style="margin-top:1rem;">Shop Now</a>
+    </div>
+  </div>
+
+  <script>
+    // Show popup if from QR
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('scan') === 'true') {
+      document.getElementById('couponPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('couponPopup').style.display = 'none';
+    }
+
+    function getRec() {
+      const mood = document.getElementById('mood').value;
+      const recs = {
+        'Cozy Mystery': 'The Thursday Murder Club',
+        'Heartfelt Romance': 'The Notebook',
+        'Edge-of-Seat Thriller': 'Gone Girl',
+        'Magical Fantasy': 'Crown of Shadows'
+      };
+      alert(We recommend: "${recs[mood]}"\n\nAdd to cart now with code HEYFIRST10!);
+    }
+
+    function scrollToCollection(id) {
+      alert(Explore ${id.replace(/([A-Z])/g, ' $1').trim()} coming soon!\nWe'll curate your perfect escape.);
+      // Later: Replace with smooth scroll to Shopify collection
+    }
+
+    document.querySelector('form').onsubmit = (e) => {
+      e.preventDefault();
+      alert('Welcome to the club! Perks incoming. 🎉');
+    };
+  </script>
+</body>
+</html>
+
+   
